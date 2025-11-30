@@ -1,74 +1,72 @@
-# ⚠️ Importante!!!
-Você pode escolher qualquer um dos desafios para desenvolver. Sinta-se à vontade para começar pelo desafio que mais lhe interessa.
+🏆 Super Trunfo de Cidades (Nível Aventureiro)
 
-# Desafio Super Trunfo - Países - Comparação das Cartas
+ Sobre o Projeto
 
-Bem-vindo ao desafio "Super Trunfo - Países"! Neste projeto, você desenvolverá um sistema para comparar cartas baseadas em atributos de cidades. O desafio é dividido em três níveis: Novato, Aventureiro e Mestre. Cada nível adiciona novas funcionalidades e complexidades, permitindo um aprendizado progressivo.
+Este projeto é uma implementação em linguagem C do jogo de cartas Super Trunfo, focado em dados de cidades. O objetivo deste nível foi introduzir a interatividade via menu switch e implementar uma lógica de comparação complexa (if-else aninhado) que lida com diferentes regras de vitória para cada atributo.
 
-## 🏅 Nível Novato
+O código permite o cadastro de duas cartas e a realização de uma única batalha interativa.
 
-No nível Novato, você começará implementando a lógica básica de comparação entre cartas utilizando estruturas de decisão `if` e `if-else`.
+✨ Funcionalidades
 
-### 🚩 Objetivos:
-- **Cadastro de Cartas:** O sistema permitirá ao usuário cadastrar cartas de cidades, incluindo informações como estado, código da carta, nome da cidade, população, área, PIB e número de pontos turísticos.
-- **Comparação de Cartas:** O sistema comparará os atributos de duas cartas e determinará a vencedora com base em uma propriedade específica (população, área, PIB, etc.), escolhida no código.
-- **Exibição de Resultados:** Após a comparação, o sistema exibirá qual carta venceu com base na regra: maior valor vence, exceto em densidade populacional, onde o menor valor é o vencedor.
+  Cadastro de Cartas: Permite a entrada de dados como População, Área, PIB e Pontos Turísticos para duas cidades.
 
-### 📥 Entrada de Dados:
-- Os dados das cartas serão inseridos manualmente via terminal.
-- O sistema solicitará interativamente as informações de cada carta.
+  Cálculos Automáticos: Calcula a Densidade Demográfica e o PIB Per Capita.
 
-### 📤 Saída de Dados:
-- Após o cadastro, as propriedades da cidade serão exibidas de forma organizada.
-- O resultado da comparação será mostrado, indicando a carta vencedora.
+  Menu de Batalha: Interface simples via console (switch) para escolher o atributo de comparação.
 
----
+  Lógica de Comparação:
 
-## 🏅 Nível Aventureiro
+  Maior Vence: Para População, Área, PIB e Pontos Turísticos.
 
-No nível Aventureiro, você expandirá o sistema para incluir a comparação aninhada e a criação de um menu interativo usando `switch`.
+  Menor Vence: Para a Densidade Demográfica (Regra Inversa).
 
-### 🆕 Diferença em relação ao Nível Novato:
-- **Menu Interativo:** O usuário poderá escolher diferentes atributos para comparação através de um menu.
-- **Comparação Aninhada:** Implementação de lógica de comparação mais complexa, utilizando estruturas aninhadas para tomar decisões baseadas em múltiplos atributos.
+  Resultado: Exibe claramente a cidade vencedora ou se houve empate.
 
-### 🚩 Novas Funcionalidades:
-- **Cadastro de Cartas:** Similar ao nível Novato, com a adição de comparação de múltiplos atributos.
-- **Menu Interativo:** Uso de `switch` para criar um menu que permite ao jogador escolher os atributos a serem comparados.
-- **Exibição de Resultados:** O sistema exibirá o resultado da comparação, indicando qual carta venceu e qual atributo foi utilizado.
+🛠️ Tecnologias Utilizadas
 
----
+Ferramenta	Descrição
+Linguagem C	Linguagem principal do projeto.
+GCC (ou similar)	Compilador C necessário para construir o executável.
 
-## 🏅 Nível Mestre
+🚀 Como Compilar e Executar
 
-No nível Mestre, o desafio se intensifica com a adição de funcionalidades avançadas, como menus dinâmicos e lógica de decisão complexa com operadores ternários.
+Siga os passos abaixo para rodar o jogo em seu ambiente local (Terminal, CMD, PowerShell ou Git Bash).
 
-### 🆕 Diferença em relação ao Nível Aventureiro:
-- **Escolha de Dois Atributos:** O usuário poderá escolher dois atributos para comparação entre as cartas.
-- **Lógica de Decisão Complexa:** Implementação de estruturas de decisão aninhadas e encadeadas, além do uso de operadores ternários para determinar a carta vencedora.
-- **Menus Dinâmicos:** Os menus serão dinâmicos, permitindo uma navegação fluida entre as opções de comparação.
+Pré-requisitos
 
-### 🚩 Novas Funcionalidades:
-- **Comparação de Dois Atributos:** O sistema comparará dois atributos simultaneamente para determinar a carta vencedora.
-- **Lógica Avançada:** Uso de operadores ternários e lógica aninhada para lidar com comparações complexas.
-- **Empates:** O sistema será capaz de lidar com empates, exibindo mensagens apropriadas.
-- **Exibição de Resultados:** Exibição dos resultados das comparações de forma clara e interativa.
+Certifique-se de ter um Compilador C (como GCC) instalado em sua máquina.
 
----
+1. Compilação
 
-## 📋 Requisitos Funcionais Comuns
-- **Cadastro de Cartas:** O sistema deve permitir o cadastro de cartas com as informações necessárias.
-- **Comparação:** O sistema deve comparar as cartas e determinar a vencedora com base nas regras estabelecidas.
-- **Exibição de Resultados:** Os resultados devem ser exibidos de forma clara, indicando a carta vencedora.
+    Salve o arquivo de código-fonte (o código C completo) no seu diretório local, por exemplo, como super_trunfo.c.
 
-## 📌 Requisitos Não Funcionais Comuns
-- **Usabilidade:** A interface do usuário deve ser simples e intuitiva.
-- **Performance:** O sistema deve executar operações sem atrasos perceptíveis.
-- **Manutenibilidade:** O código deve ser bem estruturado e documentado.
-- **Confiabilidade:** O sistema deve ser robusto e capaz de lidar com entradas inválidas de forma adequada.
+    Abra o terminal na pasta onde o arquivo foi salvo.
 
----
+    Use o GCC para compilar o código e gerar um executável:
+    Bash
 
-Boa sorte no desenvolvimento deste desafio e aproveite para aprender e se divertir enquanto progride pelos níveis!
+    gcc super_trunfo.c -o super_trunfo
 
-Equipe de Ensino - MateCheck
+2. Execução
+
+Execute o arquivo gerado:
+Bash
+
+./super_trunfo
+
+3. Jogo
+
+O programa o guiará pelas seguintes etapas:
+
+  Entrada de dados para a Carta 1.
+
+  Entrada de dados para a Carta 2.
+
+  Exibição do menu de batalha.
+
+  Escolha um número de 1 a 5 para iniciar a comparação.
+
+
+Autor: Bruno Mazini de Almeida
+
+Data: 29 de Novembro de 2025
