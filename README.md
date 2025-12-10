@@ -1,72 +1,162 @@
-🏆 Super Trunfo de Cidades (Nível Aventureiro)
+🃏 Super Trunfo – Nível Mestre
+Criado por Bruno Mazini de Almeida
 
- Sobre o Projeto
+📌 Projeto desenvolvido exclusivamente para fins acadêmicos.
 
-Este projeto é uma implementação em linguagem C do jogo de cartas Super Trunfo, focado em dados de cidades. O objetivo deste nível foi introduzir a interatividade via menu switch e implementar uma lógica de comparação complexa (if-else aninhado) que lida com diferentes regras de vitória para cada atributo.
+Este projeto é a versão final e mais avançada do jogo Super Trunfo em C, integrando múltiplos conceitos fundamentais de lógica de programação, estruturas de decisão e manipulação de dados.
 
-O código permite o cadastro de duas cartas e a realização de uma única batalha interativa.
+No jogo, o usuário cadastra duas cartas representando cidades brasileiras, escolhe dois atributos distintos e o programa determina qual carta vence com base em múltiplos critérios de comparação.
 
-✨ Funcionalidades
+🚀 Objetivo do Projeto
 
-  Cadastro de Cartas: Permite a entrada de dados como População, Área, PIB e Pontos Turísticos para duas cidades.
+Este projeto foi desenvolvido para fins acadêmicos, com o propósito de praticar:
 
-  Cálculos Automáticos: Calcula a Densidade Demográfica e o PIB Per Capita.
+Estruturas condicionais (if, else if, else)
 
-  Menu de Batalha: Interface simples via console (switch) para escolher o atributo de comparação.
+Estruturas de seleção (switch)
 
-  Lógica de Comparação:
+Menus dinâmicos
 
-  Maior Vence: Para População, Área, PIB e Pontos Turísticos.
+Uso de operador ternário
 
-  Menor Vence: Para a Densidade Demográfica (Regra Inversa).
+Manipulação de strings
 
-  Resultado: Exibe claramente a cidade vencedora ou se houve empate.
+Cálculo de atributos derivados
+
+Boas práticas de interface no terminal
+
+Lógica de comparação com múltiplos atributos
+
+🎮 Como o jogo funciona
+1️⃣ Cadastro das Cartas
+
+O usuário informa para duas cidades:
+
+Nome da cidade
+
+População
+
+Área
+
+PIB (em bilhões)
+
+Pontos turísticos
+
+O programa calcula automaticamente:
+
+Densidade demográfica
+
+PIB per capita
+
+2️⃣ Escolha de Atributos
+
+O jogador escolhe dois atributos diferentes dentre:
+
+População
+
+Área
+
+PIB
+
+Pontos turísticos
+
+Densidade demográfica
+
+✔ O menu do segundo atributo é dinâmico.
+✔ O jogador não pode repetir atributos.
+✔ O programa impede escolhas inválidas.
+
+3️⃣ Comparação
+
+Para cada atributo:
+
+Maior valor vence, exceto:
+
+Densidade demográfica → menor vence
+
+Depois disso, o programa calcula a soma dos valores ajustados:
+
+Soma maior → vitória
+
+Soma igual → Empate
+
+🧠 Lógica de Vitória
+✔ Regra geral
+Maior valor vence
+
+✔ Exceção (densidade demográfica)
+Menor valor vence
+
+
+Isso é resolvido internamente com:
+
+(opcao == 5) ? (1.0f / valor) : valor;
+
+
+Garantindo que a comparação final sempre siga a mesma regra.
+
+📝 Exibição dos Resultados
+
+O programa apresenta:
+
+Nomes das cidades comparadas
+
+Atributos escolhidos
+
+Valores de cada cidade nos dois atributos
+
+Vencedor individual de cada atributo
+
+Soma total
+
+Vencedor final ou empate
+
+A saída é clara, organizada e fácil de interpretar.
 
 🛠️ Tecnologias Utilizadas
 
-Ferramenta	Descrição
-Linguagem C	Linguagem principal do projeto.
-GCC (ou similar)	Compilador C necessário para construir o executável.
+Linguagem C
 
-🚀 Como Compilar e Executar
+stdio.h
 
-Siga os passos abaixo para rodar o jogo em seu ambiente local (Terminal, CMD, PowerShell ou Git Bash).
+string.h
 
-Pré-requisitos
+Operadores ternários
 
-Certifique-se de ter um Compilador C (como GCC) instalado em sua máquina.
+Estruturas de decisão e seleção
 
-1. Compilação
+📦 Como Compilar e Executar
+Compilação:
+gcc super_trunfo.c -o super_trunfo
 
-    Salve o arquivo de código-fonte (o código C completo) no seu diretório local, por exemplo, como super_trunfo.c.
-
-    Abra o terminal na pasta onde o arquivo foi salvo.
-
-    Use o GCC para compilar o código e gerar um executável:
-    Bash
-
-    gcc super_trunfo.c -o super_trunfo
-
-2. Execução
-
-Execute o arquivo gerado:
-Bash
-
+Execução:
 ./super_trunfo
 
-3. Jogo
+📚 Pontos de Aprendizado
 
-O programa o guiará pelas seguintes etapas:
+Este projeto (para fins acadêmicos) fortalece:
 
-  Entrada de dados para a Carta 1.
+Manipulação de entrada e saída
 
-  Entrada de dados para a Carta 2.
+Criação de menus dinâmicos
 
-  Exibição do menu de batalha.
+Estratégias para evitar escolhas inválidas
 
-  Escolha um número de 1 a 5 para iniciar a comparação.
+Cálculo de atributos derivados
 
+Uso inteligente de condicionais
 
-Autor: Bruno Mazini de Almeida
+Organização e clareza de código
 
-Data: 29 de Novembro de 2025
+⭐ Conclusão
+
+Este projeto representa o desafio final do Super Trunfo acadêmico, integrando:
+
+✔ Comparações avançadas
+✔ Menus dinâmicos
+✔ Atributos múltiplos
+✔ Tratamento de erros
+✔ Soma e desempate
+✔ Exibição profissional
+
+📌 Este programa foi criado apenas para fins educativos e de estudo.
